@@ -1,0 +1,44 @@
+﻿using Tyuiu.ZubkovaMG.Sprint3.Task2.V10.Lib;
+namespace Tyuiu.ZubkovaMG.Sprint3.Task2.V10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            DataService ds = new DataService();
+
+            Console.Title = "Спринт #3 | Выполнила: Зубкова М. Г. | ИСПб-26-1";
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* СПРИНТ #3                                                               *");
+            Console.WriteLine("* Тема: Оператор цикла do...while                                         *");
+            Console.WriteLine("* Задание #2                                                              *");
+            Console.WriteLine("* Вариант #10                                                             *");
+            Console.WriteLine("* Выполнила: Зубкова Мария Геннадьевна | ИСПб-26-1                      *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* УСЛОВИЕ:                                                                *");
+            Console.WriteLine("* Написать программу используя цикл do...while, которая вычисляет         *");
+            Console.WriteLine("* произведение ряда по формуле, при t = 1: p = prod_{k=1}^{13} (t^k + 1/(k+1)) *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("***************************************************************************");
+
+            int value = 1;
+            int startValue = 1;
+            int stopValue = 13;
+
+            Console.WriteLine("Переменная T = " + value);
+            Console.WriteLine("Старт шага = " + startValue);
+            Console.WriteLine("Конец шага = " + stopValue);
+
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
+
+            double res = ds.GetMultiplySeries(value, startValue, stopValue);
+
+            Console.WriteLine("Произведение ряда равно = " + res);
+
+            Console.ReadKey();
+        }
+    }
+}
